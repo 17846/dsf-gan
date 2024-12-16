@@ -1,0 +1,16 @@
+defaults:
+    - override hydra/hydra_logging: none
+    - override hydra/job_logging: none
+
+parameter:
+    model_path: your model path
+    checkpoint_path: ./result/test_${now:%Y%m%d%H%M%S}
+    dataset_path: your dataset path
+    device: gpu
+    reference_count: 24
+    pre: False
+hydra:
+    run:
+        dir: ${parameter.checkpoint_path}
+    sweep:
+        dir: ${parameter.checkpoint_path}

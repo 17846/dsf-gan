@@ -1,0 +1,19 @@
+defaults:
+    - override hydra/hydra_logging: none
+    - override hydra/job_logging: none
+
+parameter:
+    model_path: your generator.pth
+    reference_path: your style sample file path
+    template_path: your template path
+    checkpoint_path: ./checkpoint/inference_${now:%Y%m%d%H%M%S} # 生成文件路径
+    device: gpu
+    reference_count: 16 # 参考数量
+    target_text: 今天的天气真的很好哈
+
+
+hydra:
+    run:
+        dir: ${parameter.checkpoint_path}
+    sweep:
+        dir: ${parameter.checkpoint_path}
