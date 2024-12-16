@@ -6,7 +6,7 @@
 
 ​	The figure shows handwritten characters from six different authors along with the generation results from DSF-GAN. Here, "GT" refers to the target character to be generated, while "Generate" refers to the result produced by DSF-GAN.
 
-![](.\img\img1.png)
+![](https://github.com/17846/dsf-gan/blob/main/img/img1.png)
 
 
 
